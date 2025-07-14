@@ -1,20 +1,25 @@
-# MiniSMTP Server 
+# MiniSMTP Server (Python)
 
-A minimal custom SMTP server built in Python to simulate the core working of email communication.
+A minimal, beginner-friendly SMTP server built from scratch in Python.  
+It listens on port **2525**, handles basic SMTP commands (`HELO`, `MAIL FROM`, `RCPT TO`, `DATA`, `QUIT`), and saves incoming messages locally as `.eml` files — all while using just Python’s socket programming and logging.
 
-## Features
-- Listens on port `2525`
-- Accepts standard SMTP commands: `HELO`, `MAIL FROM`, `RCPT TO`, `DATA`, `QUIT`
-- Logs all activity using Python’s logging module
-- Saves incoming emails as .eml files
-- Organizes inbox into folders by date with timestamped filenames
+---
 
+##  Features
 
-##  Built With
-- Python 
-- `socket` – for low-level networking
-- `logging` – for structured logs
-- `datetime` – for timestamps
-- `telnet` – for testing client interaction
+- Accepts basic SMTP protocol commands
+- Parses and logs `Subject:` headers
+- Saves messages in `inbox/YYYY-MM-DD/` folders
+- Filenames include subjects + timestamps
+- Fully annotated and easy to understand
+- Built without any external libraries (just `socket`, `logging`, `os`, etc.)
+
+---
+
+## Learning Goals Behind the Project
+Understand how basic internet protocols work (SMTP)
+Learn socket programming in Python
+Handle raw text parsing, logging, and file handling
+
 
 
